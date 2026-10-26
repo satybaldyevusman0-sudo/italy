@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ky" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyItaly.kg — Италиядагы университеттер</title>
+  <meta name="description" content="Италиядагы 17 мыкты университет жөнүндө кыргыз тилиндеги толук маалымат: окуу акысы, стипендиялар, программалар, кабыл алуу.">
+  <meta name="theme-color" content="#0f8a4b">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ TOPBAR ============ -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📞 +996 700 123 456</span>
+      <span>✉️ info@studyitaly.kg</span>
+      <span class="topbar-right">🇮🇹 Bishkek · Roma · Milano</span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#/" class="logo" aria-label="StudyItaly.kg">
+        <span class="logo-flag"><i></i><i></i><i></i></span>
+        <span class="logo-text">Study<b>Italy</b><small>.kg</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Негизги меню">
+        <div class="nav-head">
+          <span class="logo-text">Study<b>Italy</b><small>.kg</small></span>
+          <button class="icon-btn" data-action="burger-close" aria-label="Жабуу">✕</button>
+        </div>
+        <a href="#/" data-nav="/"><span>🏠</span> <span data-i18n="nav_home">Башкы бет</span></a>
+        <a href="#/universities" data-nav="/universities"><span>🎓</span> <span data-i18n="nav_unis">Университеттер</span></a>
+        <a href="#/favorites" data-nav="/favorites"><span>♥</span> <span data-i18n="nav_favs">Тандалмалар</span></a>
+        <a href="#/booking" data-nav="/booking"><span>📅</span> <span data-i18n="nav_booking">Бронь</span></a>
+        <a href="#/translator" data-nav="/translator"><span>🌐</span> <span data-i18n="nav_translator">Котормочу</span></a>
+        <a href="#/admin" data-nav="/admin" data-admin-only hidden><span>⚙️</span> <span data-i18n="nav_admin">Админ</span></a>
+        <div class="nav-foot">
+          <a href="#/login" data-i18n="login">Кирүү</a>
+          <a href="#/register" data-i18n="register">Катталуу</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <select id="langSelect" class="lang-select" aria-label="Тил тандоо">
+          <option value="ky">KG</option>
+          <option value="ru">RU</option>
+          <option value="en">EN</option>
+        </select>
+        <button class="icon-btn" id="themeBtn" data-action="theme" aria-label="Күн / Түн">🌙</button>
+        <a href="#/favorites" class="icon-btn hide-xs" aria-label="Тандалмалар">♥<span class="count" id="favCount">0</span></a>
+        <a href="#/cart" class="icon-btn" aria-label="Себет">🛒<span class="count" id="cartCount">0</span></a>
+        <div id="authArea" class="auth-area"></div>
+        <button class="burger" id="burger" data-action="burger" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="overlay" id="overlay" data-action="burger-close"></div>
+
+  <!-- ============ MAIN (SPA) ============ -->
+  <main id="app" class="main">
+    <noscript><p class="container">Бул сайт иштеши үчүн JavaScript күйгүзүлгөн болушу керек.</p></noscript>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#/" class="logo">
+          <span class="logo-flag"><i></i><i></i><i></i></span>
+          <span class="logo-text">Study<b>Italy</b><small>.kg</small></span>
+        </a>
+        <p class="muted" data-i18n="footer_about">Италиядагы университеттер жөнүндө кыргыз тилиндеги эң чоң маалымат порталы.</p>
+        <div class="socials">
+          <a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram">✈️</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+          <a href="https://wa.me" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="footer_links">Шилтемелер</h4>
+        <a href="#/universities" data-i18n="nav_unis">Университеттер</a>
+        <a href="#/booking" data-i18n="nav_booking">Бронь</a>
+        <a href="#/favorites" data-i18n="nav_favs">Тандалмалар</a>
+        <a href="#/translator" data-i18n="nav_translator">Котормочу</a>
+      </div>
+      <div>
+        <h4 data-i18n="nav_unis">Университеттер</h4>
+        <a href="#/uni/unibo">Bologna</a>
+        <a href="#/uni/sapienza">Sapienza</a>
+        <a href="#/uni/polimi">Politecnico di Milano</a>
+        <a href="#/uni/bocconi">Bocconi</a>
+        <a href="#/uni/unipd">Padova</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer_contact">Байланыш</h4>
+        <p>📍 Бишкек, Чүй пр. 100</p>
+        <p>📞 +996 700 123 456</p>
+        <p>✉️ info@studyitaly.kg</p>
+        <p>🕘 Дш–Жм 09:00–18:00</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> StudyItaly.kg — <span data-i18n="rights">Бардык укуктар корголгон.</span></span>
+      <span class="muted">Сүрөттөр: Wikimedia Commons (CC)</span>
+    </div>
+  </footer>
+
+  <!-- ============ CHATBOT ============ -->
+  <button class="chat-fab" data-action="chat" aria-label="Чат">💬</button>
+  <section class="chat" id="chat" aria-live="polite">
+    <div class="chat-head">
+      <div class="chat-bot-ava">🤖</div>
+      <div>
+        <b data-i18n="chat_title">StudyItaly жардамчысы</b>
+        <small>● online</small>
+      </div>
+      <button class="icon-btn" data-action="chat" aria-label="Жабуу">✕</button>
+    </div>
+    <div class="chat-msgs" id="chatMsgs"></div>
+    <div class="chat-quick">
+      <button data-action="chat-q" data-q="Стипендия">🎁 Стипендия</button>
+      <button data-action="chat-q" data-q="Виза">🛂 Виза</button>
+      <button data-action="chat-q" data-q="Эң арзан университет">💶 Эң арзан</button>
+      <button data-action="chat-q" data-q="Документтер">📄 Документтер</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" autocomplete="off" data-i18n-ph="chat_ph" placeholder="Суроо жазыңыз...">
+      <button class="btn btn-sm" aria-label="Жөнөтүү">➤</button>
+    </form>
+  </section>
+
+  <!-- ============ TOASTS + MODAL ============ -->
+  <div class="toasts" id="toasts"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" data-action="modal-close" aria-label="Жабуу">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Chart.js (статистика үчүн) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
